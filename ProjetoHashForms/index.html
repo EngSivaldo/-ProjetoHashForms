@@ -11,6 +11,7 @@
   </head>
   <body>
     <main class="container">
+      <!--inicio div imagens-->
       <div class="images">
         <img
           src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fa6d41686876ceccfc436dd310b9e49aa.cdn.bubble.io%2Fd219%2Ff1723121793047x871980606331503000%2Foie_transparent.png?w=32&amp;h=45&amp;auto=compress&amp;dpr=1&amp;fit=max"
@@ -21,127 +22,160 @@
       </div>
 
       <div class="boxes">
+        <!--inicio box1-->
         <div class="box1">
-          <h1><i class="bx bx-user-circle"></i>Meus dados</h1>
-          <p>Confirme seus dados. Eles aparecerão em sua nota fiscal.</p>
-          <form action="#" id="formulario">
-            <fieldset>
-              <legend>Dados pessoais</legend>
+          <section class="meus-dados">
+            <h1><i class="bx bx-user-circle"></i>Meus dados</h1>
+            <p>Confirme seus dados. Eles aparecerão em sua nota fiscal.</p>
+            <form action="#" id="formulario">
+              <fieldset>
+                <legend>Dados pessoais</legend>
+                <div class="form-group">
+                  <label for="nome">Nome</label>
+                  <input
+                    type="text"
+                    name="nome"
+                    id="nome"
+                    placeholder="Digite o seunome"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="cpf">CPF</label>
+                  <input
+                    type="number"
+                    name="cpf"
+                    id="cpf"
+                    placeholder="Digite o seu cpf"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="telefone">Telefone:</label>
+                  <input
+                    type="number"
+                    name="telefone"
+                    id="telefone"
+                    placeholder="Digite o seu telefone"
+                    required
+                  />
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Endereço</legend>
+                <div class="form-group">
+                  <label for="cep">CEP:</label>
+                  <input
+                    type="text"
+                    name="cep"
+                    id="cep"
+                    placeholder="Digite o seu CEP"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="rua">RUA:</label>
+                  <input
+                    type="text"
+                    name="rua"
+                    id="rua"
+                    placeholder="Digite o sua Rua"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="numero">Numero:</label>
+                  <input
+                    type="number"
+                    name="numero"
+                    id="numero"
+                    placeholder="Digite o numero da Residência"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="complemento">Tecomplemento:</label>
+                  <input
+                    type="text"
+                    name="complemento"
+                    id="complemento"
+                    placeholder="Digite o numero da Complemento"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="bairro">Bairro:</label>
+                  <input
+                    type="text"
+                    name="bairro"
+                    id="bairro"
+                    placeholder="Digite o numero da Bairro"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="cidade">Cidade:</label>
+                  <input
+                    type="text"
+                    name="cidade"
+                    id="cidade"
+                    placeholder="Digite o numero da Cidade"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="estado">Estado:</label>
+                  <input
+                    type="text"
+                    name="estado"
+                    id="estado"
+                    placeholder="Digite o numero da Estado"
+                    required
+                  />
+                </div>
+              </fieldset>
+              <button type="submit">Enviar</button>
+            </form>
+          </section>
+        </div>
+        <!--inicio box2-->
+        <div class="box2">
+          <!--inicio secao resumo-->
+          <section class="resumo">
+            <h2><i class="bx bx-receipt"></i>Resumo</h2>
 
-              <div class="form-group">
-                <label for="nome">Nome</label>
+            <div class="resumo-item">
+              <p>Black Friday - Lote 01: R$ 1.200,00</p>
+              <p>Total: 12x R$ 100,00 ou R$ 1.200,00 à vista</p>
+            </div>
+
+            <div class="apply-discount">
+              <div class="apply-discount-header">
+                <span>Aplicar cupom de desconto</span>
+                <i id="toogle-icon" class="bx bx-chevron-down"></i>
+              </div>
+              <div class="apply-discount-body" id="apply-discount-body">
                 <input
                   type="text"
-                  name="nome"
-                  id="nome"
-                  placeholder="Digite o seunome"
-                  required
+                  name="discount-code"
+                  id="discount-code"
+                  placeholder="Digite o código de desconto!"
                 />
+                <button type="button">Aplicar</button>
+                <span
+                  style="
+                    display: block;
+                    margin-top: 10px;
+                    color: rgb(0, 201, 0);
+                  "
+                  >Mensagem de desconto</span
+                >
+                <p id="total-price">Preço Total: R$ 1200.00</p>
               </div>
-
-              <div class="form-group">
-                <label for="cpf">CPF</label>
-                <input
-                  type="number"
-                  name="cpf"
-                  id="cpf"
-                  placeholder="Digite o seu cpf"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="telefone">Telefone:</label>
-                <input
-                  type="number"
-                  name="telefone"
-                  id="telefone"
-                  placeholder="Digite o seu telefone"
-                  required
-                />
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>Endereço</legend>
-
-              <div class="form-group">
-                <label for="cep">CEP:</label>
-                <input
-                  type="text"
-                  name="cep"
-                  id="cep"
-                  placeholder="Digite o seu CEP"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="rua">RUA:</label>
-                <input
-                  type="text"
-                  name="rua"
-                  id="rua"
-                  placeholder="Digite o sua Rua"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="numero">Numero:</label>
-                <input
-                  type="number"
-                  name="numero"
-                  id="numero"
-                  placeholder="Digite o numero da Residência"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="complemento">Tecomplemento:</label>
-                <input
-                  type="text"
-                  name="complemento"
-                  id="complemento"
-                  placeholder="Digite o numero da Complemento"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="bairro">Bairro:</label>
-                <input
-                  type="text"
-                  name="bairro"
-                  id="bairro"
-                  placeholder="Digite o numero da Bairro"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="cidade">Cidade:</label>
-                <input
-                  type="text"
-                  name="cidade"
-                  id="cidade"
-                  placeholder="Digite o numero da Cidade"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="estado">Estado:</label>
-                <input
-                  type="text"
-                  name="estado"
-                  id="estado"
-                  placeholder="Digite o numero da Estado"
-                  required
-                />
-              </div>
-            </fieldset>
-            <button type="submit">Enviar</button>
-          </form>
+            </div>
+          </section>
+          <!--inicio secao resumo-->
+          <section></section>
         </div>
       </div>
     </main>
